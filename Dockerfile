@@ -1,17 +1,28 @@
 FROM node:18-alpine
 
-# Set working directory
-WORKDIR /usr/src/app
+RUN apk add --no-cache \
+    python3 \
+    py3-pip \
+    make \
+    g++ \
+    openssh-client \
+    sshpass \
+    && python3 -m venv /opt/venv \
+    && . /opt/venv/bin/activate \
+    && pip install --upgrade pip setuptools
 
-# Copy package.json and install dependencies
+ENV PATH="/opt/venv/bin:$PATH"
+
+WORKDIR /app
+
 COPY package*.json ./
 RUN npm install
 
-# Copy source files
 COPY . .
 
-# Expose the port
-EXPOSE 3000
+RUN mkdir -p /app/data && \
+    touch /app/data/connections.json && \
+    echo "[]" > /app/data/connections.json
 
-# Start the app
+EXPOSE 3000
 CMD ["npm", "start"]
