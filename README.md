@@ -29,7 +29,7 @@ Expect imperfections, and feel free to contribute or share feedback! **Work in P
 ### 📥 Pull from Docker Hub
 
 ```bash
-docker pull calmamedia/oneshell
+docker pull techbygiusi/oneshell
 ```
 
 👉 [View on Docker Hub](https://hub.docker.com/r/techbygiusi/oneshell)
@@ -37,7 +37,7 @@ docker pull calmamedia/oneshell
 ### 🖧 Run with Host Networking (Linux only)
 
 ```bash
-docker run --rm -d --network host --name oneshell calmamedia/oneshell
+docker run --rm -d --network host --name oneshell techbygiusi/oneshell
 ```
 
 > Enables LAN-level SSH and ping directly from the container.
@@ -45,7 +45,7 @@ docker run --rm -d --network host --name oneshell calmamedia/oneshell
 ### 🌐 Or run with port mapping
 
 ```bash
-docker run --rm -d -p 3000:3000 --name oneshell calmamedia/oneshell
+docker run --rm -d -p 3000:3000 --name oneshell techbygiusi/oneshell
 ```
 
 🔗 Then open in your browser:  
