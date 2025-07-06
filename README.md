@@ -120,5 +120,5 @@ Pull requests, suggestions, and issues are welcome!
 MIT License  
 © [OneBitLabs](https://onebitlabs.net) / Calma Media
 
-📦 Docker Hub: [techbygiusi/oneshell](https://hub.docker.com/r/calmamedia/oneshell)  
+📦 Docker Hub: [techbygiusi/oneshell](https://hub.docker.com/r/techbygiusi/oneshell)  
 🔗 GitHub: [github.com/techbygiusi/OneShell](https://github.com/techbygiusi/OneShell)
