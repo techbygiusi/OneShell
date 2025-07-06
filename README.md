@@ -1,84 +1,84 @@
 # ![OneShell Logo](https://onebitlabs.net/images/oneshell.png)  
-**OneShell** – ein moderner, browserbasierter SSH-Terminal
+**OneShell** – A modern, browser-based SSH terminal
 
-> Verwalte und verbinde dich zu deinen Servern direkt aus dem Browser – sicher, elegant und effizient.
+> Manage and connect to your servers directly from the browser – secure, elegant, and efficient.
 
 ---
 
-## ✨ Funktionen
+## ✨ Features
 
-- 🔐 Sichere SSH-Sitzungen über WebSocket
-- 💾 Speichern und verwalten mehrerer SSH-Verbindungen
-- 📡 Live-Status der Verbindung inkl. Ping-Anzeige
-- ⬇ Exportieren und ⬆ Importieren von Profilen (JSON)
-- 🧲 Drag & Drop-Sortierung der Verbindungen
-- 🎨 Themed Terminal mit eigenen Farben & Schriftarten
-- 📁 Aufgeräumte UI mit Branding & Datei-Upload/Download
+- 🔐 Secure SSH sessions over WebSocket
+- 💾 Save and manage multiple SSH connections
+- 📡 Live connection status with ping
+- ⬇ Export and ⬆ Import profiles (JSON)
+- 🧲 Drag & drop sorting of connections
+- 🎨 Themed terminal with custom fonts & colors
+- 📁 Clean UI with branding and file upload/download
 
 ![Screenshot](https://github.com/user-attachments/assets/b660c0b6-519e-43f3-90af-b67d9ba46644)
 
 ---
 
-## 🚀 Schnellstart
+## 🚀 Quick Start
 
-### 📥 Aus Docker Hub ziehen
+### 📥 Pull from Docker Hub
 
 ```bash
 docker pull calmamedia/oneshell
 ```
 
-👉 [Docker Hub ansehen](https://hub.docker.com/r/calmamedia/oneshell)
+👉 [View on Docker Hub](https://hub.docker.com/r/calmamedia/oneshell)
 
-### 🖧 Start mit Host-Netzwerk (nur Linux)
+### 🖧 Run with Host Networking (Linux only)
 
 ```bash
 docker run --rm -d --network host --name oneshell calmamedia/oneshell
 ```
 
-> Ermöglicht LAN-SSH/Ping direkt vom Container.
+> Enables LAN-level SSH and ping directly from the container.
 
-### 🌐 Oder mit Portweiterleitung
+### 🌐 Or run with port mapping
 
 ```bash
 docker run --rm -d -p 3000:3000 --name oneshell calmamedia/oneshell
 ```
 
-🔗 Öffne dann im Browser:  
+🔗 Then open in your browser:  
 `http://localhost:3000`
 
 ---
 
-## 🧠 Architektur
+## 🧠 How It Works
 
-OneShell basiert auf bewährten Tools:
+OneShell is built on proven tools:
 
-- [`xterm.js`](https://xtermjs.org/) – Terminal-Rendering im Browser
-- [`node-pty`](https://github.com/microsoft/node-pty) – Pseudo-Terminal für Node.js
-- `sshpass` + `ssh` – Verbindung auf Systemebene
-- Passwortspeicherung per `AES-GCM` direkt im Browser
+- [`xterm.js`](https://xtermjs.org/) – Terminal rendering in the browser
+- [`node-pty`](https://github.com/microsoft/node-pty) – Pseudo-terminal interface for Node.js
+- `sshpass` + `ssh` – Underlying SSH connections
+- AES-GCM encrypted password storage in the browser
 
 ---
 
-## 🛠️ Anpassung
+## 🛠️ Customization
 
-Eigene Logos, Farben oder Favicons gewünscht?  
-Bearbeite einfach die Datei:
+Want your own logo, colors, or favicon?  
+Edit the file:
 
 ```plaintext
 /public/index.html
 ```
 
-Passe dort an:
+Update the following:
 
 - 🔄 Logo → `<img src="/logo.svg" ... />`
 - 🎨 Favicon → `<link rel="icon" href="favicon.ico" />`
-- 🌈 Farbschema → über CSS-Variablen oder Theme-Konfiguration
+- 🌈 Theme → CSS variables or theme configuration
 
 ---
 
-## 📂 Persistente Speicherung
+## 📂 Persistent Storage
 
-Daten dauerhaft sichern? Nutze ein Volume:
+To persist connection settings between container restarts:
 
 ```bash
 docker run -d -p 3000:3000 \
@@ -89,7 +89,7 @@ docker run -d -p 3000:3000 \
 
 ---
 
-## 📦 Entwicklung & Beitrag
+## 📦 Development & Contribution
 
 ```bash
 git clone https://github.com/techbygiusi/OneShell
@@ -98,11 +98,11 @@ npm install
 node server.js
 ```
 
-Pull Requests, Verbesserungsvorschläge und Issues sind willkommen!
+Pull requests, suggestions, and issues are welcome!
 
 ---
 
-## 📝 Lizenz
+## 📝 License
 
 MIT License  
 © [OneBitLabs](https://onebitlabs.net) / Calma Media
