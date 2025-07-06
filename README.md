@@ -1,83 +1,108 @@
-![OneShell Logo](https://onebitlabs.net/images/oneshell.png)
+> ⚠️ Disclaimer
+This project was built with the assistance of AI tools and a strong dose of curiosity.
+I’m not a professional developer — just passionate about learning and experimenting.
+Expect imperfections, and feel free to contribute or share feedback! **Work in Progress**
 
-**OneShell** is a modern, web-based SSH terminal that lets you manage and connect to servers directly from your browser — securely and with style.
+# ![OneShell Logo](https://onebitlabs.net/images/oneshell.png)  
+**OneShell** – A modern, browser-based SSH terminal
+
+> Manage and connect to your servers directly from the browser – secure, elegant, and efficient.
 
 ---
 
 ## ✨ Features
 
-- 🔐 WebSocket-based secure SSH sessions
+- 🔐 Secure SSH sessions over WebSocket
 - 💾 Save and manage multiple SSH connections
-- 📡 Live connection status (with ping)
-- ⬇ Export and ⬆ Import your connection profiles as JSON
+- 📡 Live connection status with ping
+- ⬇ Export and ⬆ Import profiles (JSON)
 - 🧲 Drag & drop sorting of connections
-- 🎨 Themed terminal with custom fonts and colors
-- 📁 Clean UI with logo branding and upload/download buttons
+- 🎨 Themed terminal with custom fonts & colors
+- 📁 Clean UI with branding and file upload/download
+
+![Screenshot](https://github.com/user-attachments/assets/b660c0b6-519e-43f3-90af-b67d9ba46644)
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Quick Start
 
-### Pull from Docker Hub
-
-```bash
-docker pull calmamedia/oneshell
-```
-
-### Run with Host Networking (Linux Only)
+### 📥 Pull from Docker Hub
 
 ```bash
-docker run --rm -d   --network host   --name oneshell   calmamedia/oneshell
+docker pull techbygiusi/oneshell
 ```
 
-> 🔸 This allows the container to access devices on the host's local network, enabling full LAN ping and SSH.
+👉 [View on Docker Hub](https://hub.docker.com/r/techbygiusi/oneshell)
 
-### Or Run with Port Mapping
+### 🖧 Run with Host Networking (Linux only)
 
 ```bash
-docker run --rm -d   -p 3000:3000   --name oneshell   calmamedia/oneshell
+docker run --rm -d --network host --name oneshell techbygiusi/oneshell
 ```
 
-Then open your browser at:  
-👉 `http://localhost:3000`
+> Enables LAN-level SSH and ping directly from the container.
+
+### 🌐 Or run with port mapping
+
+```bash
+docker run --rm -d -p 3000:3000 --name oneshell techbygiusi/oneshell
+```
+
+🔗 Then open in your browser:  
+`http://localhost:3000`
 
 ---
 
-## 🧠 How it Works
+## 🧠 How It Works
 
-OneShell uses:
+OneShell is built on proven tools:
 
-- `xterm.js` for rendering terminal output
-- `node-pty` to handle interactive pseudo-terminal processes
-- `sshpass` and `ssh` for the underlying connection
-- Encrypted password storage in the browser via `AES-GCM`
+- [`xterm.js`](https://xtermjs.org/) – Terminal rendering in the browser
+- [`node-pty`](https://github.com/microsoft/node-pty) – Pseudo-terminal interface for Node.js
+- `sshpass` + `ssh` – Underlying SSH connections
+- AES-GCM encrypted password storage in the browser
 
 ---
 
 ## 🛠️ Customization
 
-Want to change the logo, favicon, or theme color?  
-Edit `/public/index.html` and replace:
+Want your own logo, colors, or favicon?  
+Edit the file:
 
-- Logo → `<img src="/logo.svg" ... />`
-- Favicon → `<link rel="icon" href="favicon.ico" />`
-- Theme → CSS variables or update terminal theme config
+```plaintext
+/public/index.html
+```
 
+Update the following:
+
+- 🔄 Logo → `<img src="images/logo.png"... />`
+- 🎨 Favicon → `<link rel="icon" href="images/favicon.ico" />`
+
+```plaintext
+/public/stylesheets/style.css
+```
+- 🌈 Theme → Theme configuration
+
+```plaintext
+/public/stylesheets/colors.css
+```
+- 🌈 Theme → CSS colore variables configuration
 ---
 
-## 📂 Volumes & Persistence
+## 📂 Persistent Storage
 
-If you'd like to persist connection settings between container restarts, mount a volume:
+To persist connection settings between container restarts:
 
 ```bash
-docker run -d -p 3000:3000   -v $(pwd)/data:/app/connections   --name oneshell   calmamedia/oneshell
+docker run -d -p 3000:3000 \
+  -v $(pwd)/data:/app/connections \
+  --name oneshell \
+  techbygiusi/oneshell
 ```
 
 ---
 
-## 📦 Development
-
-Clone the repo and run it locally:
+## 📦 Development & Contribution
 
 ```bash
 git clone https://github.com/techbygiusi/OneShell
@@ -86,9 +111,14 @@ npm install
 node server.js
 ```
 
+Pull requests, suggestions, and issues are welcome!
+
 ---
 
 ## 📝 License
 
 MIT License  
-© OneBitLabs / Calma Media
+© [OneBitLabs](https://onebitlabs.net) / Calma Media
+
+📦 Docker Hub: [techbygiusi/oneshell](https://hub.docker.com/r/calmamedia/oneshell)  
+🔗 GitHub: [github.com/techbygiusi/OneShell](https://github.com/techbygiusi/OneShell)
