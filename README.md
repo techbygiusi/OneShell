@@ -1,4 +1,7 @@
-> ⚠️ **Work in Progress**: OneShell is still under development. Features, UI, and stability may change over time.
+> ⚠️ Disclaimer
+This project was built with the assistance of AI tools and a strong dose of curiosity.
+I’m not a professional developer — just passionate about learning and experimenting.
+Expect imperfections, and feel free to contribute or share feedback! **Work in Progress**
 
 # ![OneShell Logo](https://onebitlabs.net/images/oneshell.png)  
 **OneShell** – A modern, browser-based SSH terminal
