@@ -53,6 +53,44 @@ docker run --rm -d -p 3000:3000 --name oneshell techbygiusi/oneshell
 
 ---
 
+### ⚙️ Alternative: Run via Docker Compose
+
+#### For all platforms (port mapping):
+
+```yaml
+version: '3.8'
+
+services:
+  oneshell:
+    image: techbygiusi/oneshell:latest
+    container_name: oneshell
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+```
+
+#### For Linux with host network:
+
+```yaml
+version: '3.8'
+
+services:
+  oneshell:
+    image: techbygiusi/oneshell:latest
+    container_name: oneshell
+    restart: unless-stopped
+    network_mode: host
+```
+
+🖐 Save one of the above snippets as `docker-compose.yml`
+Then run:
+
+```bash
+docker-compose up -d
+```
+
+---
+
 ## 🧠 How It Works
 
 OneShell is built on proven tools:
