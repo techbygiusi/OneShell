@@ -75,10 +75,18 @@ Edit the file:
 
 Update the following:
 
-- 🔄 Logo → `<img src="/logo.svg" ... />`
-- 🎨 Favicon → `<link rel="icon" href="favicon.ico" />`
-- 🌈 Theme → CSS variables or theme configuration
+- 🔄 Logo → `<img src="images/logo.png"... />`
+- 🎨 Favicon → `<link rel="icon" href="images/favicon.ico" />`
 
+```plaintext
+/public/stylesheets/style.css
+```
+- 🌈 Theme → Theme configuration
+
+```plaintext
+/public/stylesheets/colors.css
+```
+- 🌈 Theme → CSS colore variables configuration
 ---
 
 ## 📂 Persistent Storage
@@ -89,7 +97,7 @@ To persist connection settings between container restarts:
 docker run -d -p 3000:3000 \
   -v $(pwd)/data:/app/connections \
   --name oneshell \
-  calmamedia/oneshell
+  techbygiusi/oneshell
 ```
 
 ---
@@ -112,5 +120,5 @@ Pull requests, suggestions, and issues are welcome!
 MIT License  
 © [OneBitLabs](https://onebitlabs.net) / Calma Media
 
-📦 Docker Hub: [calmamedia/oneshell](https://hub.docker.com/r/calmamedia/oneshell)  
+📦 Docker Hub: [techbygiusi/oneshell](https://hub.docker.com/r/calmamedia/oneshell)  
 🔗 GitHub: [github.com/techbygiusi/OneShell](https://github.com/techbygiusi/OneShell)
