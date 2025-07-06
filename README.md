@@ -14,6 +14,8 @@
 - 🎨 Themed terminal with custom fonts and colors
 - 📁 Clean UI with logo branding and upload/download buttons
 
+![image](https://github.com/user-attachments/assets/b660c0b6-519e-43f3-90af-b67d9ba46644)
+
 ---
 
 ## 🚀 Getting Started
