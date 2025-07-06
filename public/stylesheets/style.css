@@ -1,0 +1,142 @@
+@import url('colors.css');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    background-color: var(--color-11);
+}
+
+.sidebar {
+    width: 320px;
+    padding: 24px;
+    background-color: var(--color-12);
+    border-right: 1px solid var(--color-9);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    font-size: 16px;
+    font-weight: 400;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.04);
+}
+
+.sidebar h2 {
+    margin: 0 0 20px;
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--color-1);
+}
+
+.sidebar input,
+.sidebar button {
+    width: 100%;
+    padding: 12px 14px;
+    margin-top: 6px;
+    border: 1.5px solid var(--color-7);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sidebar input:focus {
+    border-color: var(--color-5);
+    box-shadow: 0 0 6px rgba(108, 92, 231, 0.3);
+    outline: none;
+}
+
+.sidebar button {
+    background-color: var(--color-5);
+    color: var(--color-14);
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar button:hover {
+    background-color: var(--color-4);
+}
+
+.button-row {
+    display: flex;
+    gap: 12px;
+    margin-top: -16px;
+}
+
+.button-row button {
+    flex: 1;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--color-5);
+    color: var(--color-14);
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-row button:hover {
+    background-color: var(--color-4);
+}
+
+.connection-list {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-top: 12px;
+    border-top: 1px solid var(--color-9);
+}
+
+.connection-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    background-color: var(--color-10);
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--color-3);
+    transition: background-color 0.2s ease;
+}
+
+.connection-item:hover {
+    background-color: var(--color-8);
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--color-13);
+    flex-shrink: 0;
+}
+
+#terminal {
+    flex-grow: 1;
+    height: 100%;
+    background-color: var(--color-2);
+    overflow-x: hidden;
+    font-family: 'JetBrains Mono', 'Fira Mono', monospace !important;
+}
+
+.xterm-viewport,
+.xterm-screen {
+    padding-left: 10px !important;
+    overflow-x: hidden !important;
+}
+
+.info {
+    font-size: 13px;
+    color: var(--color-6);
+    margin-top: 8px;
+    user-select: none;
+}
