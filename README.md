@@ -29,7 +29,7 @@
 docker pull calmamedia/oneshell
 ```
 
-👉 [View on Docker Hub](https://hub.docker.com/r/calmamedia/oneshell)
+👉 [View on Docker Hub](https://hub.docker.com/r/techbygiusi/oneshell)
 
 ### 🖧 Run with Host Networking (Linux only)
 
